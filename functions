@@ -1,0 +1,140 @@
+//FUNCTIONS
+
+
+/*
+function name(parameter1, parameter2, parameter3) {
+    // code to be executed
+  }
+*/
+
+
+//Function with console.log and calling the function at the end with no parameters and no arguments. 
+function reusableFunction() {
+  console.log("Hi World");
+}
+
+reusableFunction();
+
+
+//Function with console.log and calling the function by giving the function a variable name "myVar".
+function reusableFunction2() {
+  console.log("Fuck World");
+}
+
+const myVar = (reusableFunction2());
+
+
+//Function with console.log and calling the function with newName while adding the argument "Matt". 
+function newName(name) {
+  console.log("hello " + name)
+}
+
+newName("Matt");
+
+
+//Function with console.log and calling the function using to arguments 2, 2. 
+function sum(num1, num2) {
+  console.log(num1 + num2);  
+}
+
+sum(2, 2);  
+
+
+//Function with console.log and calling the function with the function name myDumbName and inputing the argument "neo". 
+function myDumbName(name) {
+  console.log("Hello " + name);
+}
+
+myDumbName("neo"); 
+
+
+//Function with return calling the function with myDumbThing and adding the argument "jim". Then logging it to the console. 
+
+function myDumbThing(name) {
+  return "Hello " + name;
+}
+myDumbThing("Jim");
+console.log(myDumbThing("Jim") + ", nice to meet you.");
+
+
+
+//Function with return and assigning the function a variable name "greeting". Logging the function to the console with console.log. 
+function myDumbThing(name) {
+  return "Hello " + name;
+}
+
+const greeting = myDumbThing("Neo");
+
+console.log(greeting);
+
+console.log(greeting + "," + " Nice to meet you.");
+
+
+//FUNCTION DEFINITION - A STANDARD FUNCTION
+
+function thisFunction(place) {
+  return "I love " + place;
+}
+  thisFunction("Chicago");
+console.log(thisFunction("Chicago"));
+
+const city = thisFunction("Chicago");
+console.log(city);
+
+//FUNCTION EXPRESSION - A FUNCTION INSIDE A VARIABLE
+
+const square = function (num) {
+  return num * num;
+};
+console.log(square(5));
+square(5);
+
+//FUNCTIONS WITH DEFAULT PARAMETERS
+
+function makeShoppingList(item1 = 'milk', item2 = 'bread', item3 = 'eggs'){
+  console.log(`Remember to buy ${item1}`);
+  console.log(`Remember to buy ${item2}`);
+  console.log(`Remember to buy ${item3}`);
+}
+
+makeShoppingList();
+
+//CHANGE A PARAMETER
+makeShoppingList(item1 = 'cereal', item2 = 'potatoes', item3 = 'coffee');
+
+
+//FUNCTION FOR LISTING OBJECTIVES
+
+function playLevelTwo(goal1, goal2, goal3, goal4) {
+  return "Goals for level 2 are: " + goal1 + goal2 + goal3 + goal4;
+}
+
+const objectives = playLevelTwo("Get the ruby, ", "Find the sword, ", "Open the door, ", "Defeat the boss."); 
+console.log(objectives);
+
+//USING A STRING LITERAL (remember to use ` and not ')
+
+function playLevelThree(objective1, objective2, objective3) {
+  return `Level 3 objectives: ${objective1}, ${objective2}, ${objective3}`;
+}
+ const levelThreeObjectives = playLevelThree("Find the wolf, ", "Defeat the wolf, ", "Save the girl");
+ console.log(levelThreeObjectives);
+
+ function playLevelTwo(goal1, goal2, goal3, goal4) {
+  return `Goals for level 2 are ${goal1}, ${goal2}, ${goal3}, ${goal4}`;
+}
+
+const objectivess = playLevelTwo("Get the ruby", "Find the sword", "Open the door", "Defeat the boss."); 
+console.log(objectivess); 
+
+//HELPER FUNCTION - function inside another function
+
+function guests(number) {
+  return potatoes(number * 2);
+}
+function potatoes(total) {
+  console.log(total);
+}
+
+guests(10);
+
